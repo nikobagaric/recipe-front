@@ -2,7 +2,7 @@ import './index.css'
 
 const Navbar = () => {
     return (
-        <div className="navbar fixed rounded-b-full top-0 w-screen h-20 shadow-lg bg-main_red-100 z-10">
+        <div className="navbar fixed rounded-b-full top-0 w-screen h-20 shadow-lg bg-main_red-100 z-10 overflow-x-hidden">
             <div className="navbar-container flex justify-evenly">
                 <input type="checkbox" name="" id=""/>
                 <div className="hamburger">
