@@ -1,6 +1,15 @@
 import './index.css'
+import tempdata from '../../components/RecipePost/tempdata'
+
+import RecipePost from '../../components/RecipePost'
 
 const Home = () => {
+    const recipes = tempdata.map(recipe => {
+        return(
+            <RecipePost props={recipe} />
+        )
+    })
+
     return (
         <main className="home w-screen overflow-x-hidden">
             <div className="hero-container">
@@ -12,6 +21,7 @@ const Home = () => {
                 </div>
             </div>
             <div className="recipes-container">
+                {recipes}
             </div>
         </main>
     )
