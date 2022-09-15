@@ -2,6 +2,9 @@
     width: 1900px;
     height: 700px;
 }
+.search-text {
+    font-family: 'Times New Roman', Times, serif;
+}
 .search-box {
     top: 30vh;
     display: flex;

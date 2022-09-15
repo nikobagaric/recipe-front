@@ -1,4 +1,25 @@
+.recipe-container {
+    margin-top: 3vh;
+}
 .recipe-post {
-    width: 1300px;
-    margin-top: 300vh;
+    max-width: 1300px;
+    display: flex;
+}
+.recipe-post-image {
+    max-width: 600px;
+    min-width: 600px;
+    max-width: 400px;
+    min-width: 400px;
+}
+.recipe-body-title {
+    font-size: xx-large;
+    margin-bottom: 4vh;
+}
+.recipe-body-h2 {
+    margin-top: 2vh;
+    font-size: large;
+}
+.recipe-body-description {
+    margin-top: 6vh;
+    max-width: 870px;
 }
