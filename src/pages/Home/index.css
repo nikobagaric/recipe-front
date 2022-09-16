@@ -1,9 +1,13 @@
+@font-face {
+    font-family: WinterBeauty;
+    src: url('../../../public/fonts/winterbeauty-Script.otf');
+}
 .hero-image {
     width: 1900px;
     height: 700px;
 }
 .search-text {
-    font-family: 'Times New Roman', Times, serif;
+    font-family: WinterBeauty;
 }
 .search-box {
     top: 30vh;
