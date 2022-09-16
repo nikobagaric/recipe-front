@@ -29,9 +29,9 @@ const Navbar = () => {
       <div className="sidebar-container">
         <div className={`sidebar${sidebarOpen ? ' sidebar-active' : ''}`}>
           <ul className="sidebar-list">
-            <li className="sidebar-list-a"><a href="" onClick={closeSidebar}><p className="sidebar-list-link">Link</p></a></li>
-            <li className="sidebar-list-a"><a href="" onClick={closeSidebar}><p className="sidebar-list-link">Link</p></a></li>
-            <li className="sidebar-list-a"><a href="" onClick={closeSidebar}><p className="sidebar-list-link">Link</p></a></li>
+            <li className="sidebar-list-a"><a href="/" onClick={closeSidebar}><p className="sidebar-list-link">Home</p></a></li>
+            <li className="sidebar-list-a"><a href="/users" onClick={closeSidebar}><p className="sidebar-list-link">Users</p></a></li>
+            <li className="sidebar-list-a"><a href="/sign-up" onClick={closeSidebar}><p className="sidebar-list-link">Sign up</p></a></li>
             <li className="sidebar-list-a"><a href="" onClick={closeSidebar}><p className="sidebar-list-link">Link</p></a></li>
           </ul>
         </div>

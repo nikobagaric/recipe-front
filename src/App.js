@@ -1,7 +1,9 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
 import Navbar from "./components/Navbar";
+import tempdata from './components/RecipePost/tempdata';
 import Home from './pages/Home';
+import Recipe from './pages/Recipe';
 
 function App() {
   return (
@@ -11,6 +13,7 @@ function App() {
       </div>
       <Routes>
         <Route exact path='/' element={<Home/>}/>
+        <Route path ='/recipe/:id' element={<Recipe match={tempdata}/>}/>
       </Routes>
     </Router>
   );

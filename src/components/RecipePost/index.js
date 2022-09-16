@@ -2,7 +2,7 @@ import "./index.css";
 
 const RecipePost = ({ props }) => {
   return (
-    <div className="recipe-container flex justify-center">
+    <div className="recipe-post-container flex justify-center">
       <div className="recipe-post">
         <img className="recipe-post-image object-cover border-2 border-gray-300" src={props.image} />
         <div className="recipe-body ml-8">
