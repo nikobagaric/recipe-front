@@ -12,9 +12,11 @@ const Home = () => {
     })
 
     return (
-        <main className="home w-screen overflow-x-hidden">
+        <main className="home w-screen">
             <div className="hero-container">
-                <img src="images/food-hero.jpg" className="hero-image opacity-90 object-cover" />
+                <div className='hero-image-container'>
+                    <img src="images/food-hero.jpg" className="hero-image opacity-90 object-cover" />
+                </div>
                 <div className="search-box w-screen absolute left-0">
                     <h1 className="search-text mb-10 text-7xl">Find a Recipe</h1>
                     <input placeholder='Find a recipe' className="search-box opacity-50 rounded-full

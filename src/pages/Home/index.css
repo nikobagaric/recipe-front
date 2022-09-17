@@ -2,9 +2,12 @@
     font-family: WinterBeauty;
     src: url('../../../public/fonts/winterbeauty-Script.otf');
 }
+.hero-image-container {
+    max-width: 100vw;
+}
 .hero-image {
-    width: 1900px;
-    height: 700px;
+    min-width: 100vw;
+    max-height: 70vh;
 }
 .search-text {
     font-family: WinterBeauty;
@@ -15,4 +18,10 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+@media only screen and (max-width: 720px) {
+    .search-box {
+        top: 20vh;
+    }
 }
