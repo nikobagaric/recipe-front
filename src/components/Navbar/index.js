@@ -1,16 +1,23 @@
 import { useState } from "react";
 import "./index.css";
 
-const Navbar = () => {
+import LogIn from '../LogIn'
+
+const Navbar = (API_URL) => {
+  const [logInActive, setLogInActive] = useState(false)
   const [sidebarOpen, setSidebarOpen] = useState(false)
 
   const handleSidebar = () => {
     setSidebarOpen(prev => !prev)
   }
-
   const closeSidebar = () => {
     setSidebarOpen(false)
   }
+
+  const toggleLogIn = () => {
+    closeSidebar()
+    setLogInActive(prevState => !prevState)
+}
 
   return (
     <div>
@@ -32,10 +39,11 @@ const Navbar = () => {
             <li className="sidebar-list-a"><a href="/" onClick={closeSidebar}><p className="sidebar-list-link">Home</p></a></li>
             <li className="sidebar-list-a"><a href="/users" onClick={closeSidebar}><p className="sidebar-list-link">Users</p></a></li>
             <li className="sidebar-list-a"><a href="/sign-up" onClick={closeSidebar}><p className="sidebar-list-link">Sign up</p></a></li>
-            <li className="sidebar-list-a"><a href="" onClick={closeSidebar}><p className="sidebar-list-link">Link</p></a></li>
+            <li className="sidebar-list-a"><a onClick={toggleLogIn}><p className="sidebar-list-link">Log in</p></a></li>
           </ul>
         </div>
       </div>
+      <LogIn active={logInActive} API_URL={API_URL} toggle={toggleLogIn}/>
     </div>
   );
 };

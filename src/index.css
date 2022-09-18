@@ -15,6 +15,46 @@ body {
   overflow-x: hidden;
 }
 
+/* FOR SIGN-UP AND LOG-IN PAGES/COMPONENTS */
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(235, 237, 239);
+  padding: 2.5rem;
+  border-radius: 2rem;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+}
+.form-label {
+  font-size: x-large;
+  font-weight: 420;
+  padding-bottom: 0.5rem;
+}
+.form-input {
+  padding: 0.5rem;
+  border-radius: 1rem;
+  font-size: large;
+}
+.submit-button {
+  background-color: rgb(255, 64, 0);
+  color: white;
+  border-radius: 2rem;
+  padding-left: 4rem;
+  padding-right: 4rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  transition: 0.15s ease-in-out;
+}
+.submit-button:hover {
+  background-color: rgb(212, 53, 0);
+}
+/* END AUTH */
+
 @layer components {
 }
 

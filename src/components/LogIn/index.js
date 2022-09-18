@@ -1,15 +1,12 @@
-import { useState } from 'react'
-import LogIn from '../../components/LogIn'
+import { useState } from "react"
 import './index.css'
+import {GrClose} from 'react-icons/gr'
 
-const SignUp = (API_URL) => {
-    const [logInActive, setLogInActive] = useState(false)
+const LogIn = (props) => {
     const [formData, setFormData] = useState(
         {
-            username: '',
             email: '',
             password: '',
-            confirmPassword: '',
         }
     )
     const handleChange = (event) => {
@@ -22,7 +19,7 @@ const SignUp = (API_URL) => {
         })
     }
     const handleSubmit = () => {
-        fetch(API_URL, {
+        fetch(props.API_URL, {
             method: 'POST',
             headers: {
                 'Accept': 'application/json',
@@ -31,24 +28,12 @@ const SignUp = (API_URL) => {
             body: JSON.stringify(formData)
         })
     }
-
-    const toggleLogIn = () => {
-        setLogInActive(prevState => !prevState)
-    }
-
     return (
         <>
-        <div className='auth-container'>
-            <div className='auth-form'>
-                <div className='username-form form'>
-                    <label className='form-label' htmlFor='username'>Username:</label>
-                    <input
-                        className='form-input'
-                        type='text'
-                        name='username'
-                        placeholder='Username'
-                        onChange={handleChange}
-                        value={formData.username} />
+        <div className={`log-in-container ${props.active ? "active" : ""}`}>
+            <div className="auth-form">
+                <div className={`log-in-x-button ${props.active ? "active" : ""}`} onClick={props.toggle}>
+                    <GrClose size={'40px'}/>
                 </div>
                 <div className='email-form form'>
                     <label className='form-label' htmlFor='email'>Email:</label>
@@ -70,23 +55,11 @@ const SignUp = (API_URL) => {
                         onChange={handleChange}
                         value={formData.password} />
                 </div>
-                <div className='c-password-form form'>
-                    <label className='form-label' htmlFor='confirmPassword'>Confirm password:</label>
-                    <input
-                        className='form-input'
-                        type='password'
-                        name='confirmPassword'
-                        placeholder='Confirm password'
-                        onChange={handleChange}
-                        value={formData.confirmPassword} />
-                </div>
-                <p className='log-in' onClick={toggleLogIn}>Already have an account?</p>
                 <button type='submit' onClick={handleSubmit} className='submit-button'>Register</button>
             </div>
         </div>
-            <LogIn active={logInActive} API_URL={API_URL} toggle={toggleLogIn}/>
         </>
     )
 }
 
-export default SignUp
+export default LogIn
