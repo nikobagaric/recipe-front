@@ -1,7 +1,6 @@
 import './index.css'
 import { useState } from "react"
-
-import ImageUpload from '../../components/ImageUpload'
+import axios from 'axios'
 
 const PostRecipe = ({ API_URL }) => {
     const [formData, setFormData] = useState(
@@ -12,9 +11,10 @@ const PostRecipe = ({ API_URL }) => {
             cost: 0,
             ingredients: [''],
             tags: [''],
-            image: '',
+            image: image,
         }
     )
+    const [image, setImage] = useState('')
 
     const handleChange = (event) => {
         const { name, value } = event.target
@@ -24,6 +24,20 @@ const PostRecipe = ({ API_URL }) => {
                 [name]: value
             }
         })
+    }
+
+    const handleImageChange = (event) => {
+        console.log(event.target.files)
+        setImage(event.target.files[0])
+    }
+
+    const handleSubmit = () => {
+        const submitData = new FormData()
+        submitData.append(formData)
+        axios.post(API_URL, submitData)
+            .then((res) => {
+                console.log(res)
+            })
     }
 
     return (
@@ -75,7 +89,10 @@ const PostRecipe = ({ API_URL }) => {
                 </div>
             </div>
             <div className='default-container'>
-                <ImageUpload API_URL={API_URL}/>
+                <div className="image-upload-container">
+                    <input type="file" value={image} onChange={handleImageChange} />
+                    <button onClick={handleSubmit} >Submit</button>
+                </div>
             </div>
         </div>
     )

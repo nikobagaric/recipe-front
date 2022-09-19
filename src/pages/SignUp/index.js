@@ -21,15 +21,14 @@ const SignUp = (API_URL) => {
             }
         })
     }
+
     const handleSubmit = () => {
-        fetch(API_URL, {
-            method: 'POST',
-            headers: {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(formData)
-        })
+        const submitData = new FormData()
+        submitData.append(formData)
+        axios.post(API_URL, submitData)
+            .then((res) => {
+                console.log(res)
+            })
     }
 
     const toggleLogIn = () => {
