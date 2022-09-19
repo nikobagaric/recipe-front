@@ -1,0 +1,29 @@
+.recipe-upload-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100vh;
+    width: 100vw;
+}
+.recipe-upload-form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.post-form-label {
+    font-size: 1.5rem;
+    font-weight: 500;
+    padding: 0.25rem;
+}
+.post-form-input {
+    border: 2px solid rgb(235, 237, 239);
+    border-radius: 2rem;
+    padding: 4px;
+    box-sizing: border-box;
+    resize: none;
+}
+.description-form {
+    padding: 1rem 1rem;
+    width: 40vw;
+    height: 40vh;
+}
