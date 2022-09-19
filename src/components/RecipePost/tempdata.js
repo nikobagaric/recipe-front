@@ -9,9 +9,9 @@ export default [
     ingredients: ['Rice', 'Chorizo', 'Oysters', 'Shrimp', 'Cool Sauce'],
     image: "images/paella.jpg",
     link: "https://google.com",
-    tags: ["tag A", "tag B"],
+    tags: ["Spanish", "Seafood"],
     user: "John Doe",
-  },
+  }, // we can filter in front end and in back end :D
   {
     id: 2,
     title: "Spanish Paella",

@@ -12,7 +12,7 @@ function App() {
   return (
     <Router>
       <div className="flex overflow-x-hidden">
-        <Navbar />
+        <Navbar API_URL={API_URL} />
       </div>
       <Routes>
         <Route exact path='/' element={<Home/>}/>

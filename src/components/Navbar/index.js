@@ -21,7 +21,7 @@ const Navbar = (API_URL) => {
 
   return (
     <div>
-      <div className="navbar fixed rounded-b-full top-0 w-screen h-20 shadow-lg bg-main_red-100 z-10 overflow-x-hidden">
+      <div className="navbar fixed rounded-b-full top-0 w-screen h-20 shadow-lg bg-main_red-100 z-10">
         <div className="navbar-container flex justify-evenly">
           <div className="hamburger" onClick={handleSidebar}>
             <span className={`line line1${sidebarOpen ? ' line1-active' : ''}`}></span>
