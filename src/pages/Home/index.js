@@ -17,6 +17,7 @@ const Home = () => {
     useEffect(() => {
         setRecipes(tempdata
             .filter(recipe => recipe.title.includes(searchData) ||
+                                recipe.title.toLowerCase().includes(searchData) ||
                                 recipe.ingredients.includes(searchData) ||
                                 recipe.tags.includes(searchData) ||
                                 searchData === '')

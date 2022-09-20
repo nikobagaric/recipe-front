@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import LogIn from '../../components/LogIn'
 import './index.css'
+import axios from 'axios'
 
 const SignUp = (API_URL) => {
     const [logInActive, setLogInActive] = useState(false)

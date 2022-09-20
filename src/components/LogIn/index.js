@@ -1,6 +1,7 @@
 import { useState } from "react"
 import './index.css'
 import { GrClose } from 'react-icons/gr'
+import axios from "axios"
 
 const LogIn = (props) => {
     const [formData, setFormData] = useState(
@@ -21,7 +22,7 @@ const LogIn = (props) => {
     const handleSubmit = () => {
         const submitData = new FormData()
         submitData.append(formData)
-        axios.post(API_URL, submitData)
+        axios.post(props.API_URL, submitData)
             .then((res) => {
                 console.log(res)
             })

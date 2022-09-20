@@ -11,10 +11,10 @@ const PostRecipe = ({ API_URL }) => {
             cost: 0,
             ingredients: [''],
             tags: [''],
-            image: image,
+            image: '',
         }
     )
-    const [image, setImage] = useState('')
+    const [image, setImage] = useState("")
 
     const handleChange = (event) => {
         const { name, value } = event.target
@@ -29,6 +29,12 @@ const PostRecipe = ({ API_URL }) => {
     const handleImageChange = (event) => {
         console.log(event.target.files)
         setImage(event.target.files[0])
+        setFormData(prevFormData => {
+            return {
+                ...prevFormData,
+                [image]: image,
+            }
+        })
     }
 
     const handleSubmit = () => {
@@ -90,6 +96,9 @@ const PostRecipe = ({ API_URL }) => {
             </div>
             <div className='default-container'>
                 <div className="image-upload-container">
+                    <div className='uploaded-image-container'>
+                        <img className='uploaded-image' src={image} alt="goofy ahh uncle productions"/>
+                    </div>
                     <input type="file" value={image} onChange={handleImageChange} />
                     <button onClick={handleSubmit} >Submit</button>
                 </div>
