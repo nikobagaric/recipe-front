@@ -26,7 +26,7 @@ const SignUp = (API_URL) => {
     const handleSubmit = () => {
         const submitData = new FormData()
         submitData.append(formData)
-        axios.post(API_URL, submitData)
+        axios.post(API_URL+'/register', submitData)
             .then((res) => {
                 console.log(res)
             })

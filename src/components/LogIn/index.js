@@ -22,7 +22,7 @@ const LogIn = (props) => {
     const handleSubmit = () => {
         const submitData = new FormData()
         submitData.append(formData)
-        axios.post(props.API_URL, submitData)
+        axios.post(props.API_URL+'/login', submitData)
             .then((res) => {
                 console.log(res)
             })

@@ -35,12 +35,13 @@ const PostRecipe = ({ API_URL }) => {
                 [image]: image,
             }
         })
+        console.log(image)
     }
 
     const handleSubmit = () => {
         const submitData = new FormData()
         submitData.append(formData)
-        axios.post(API_URL, submitData)
+        axios.post(API_URL+'/recipe/post', submitData)
             .then((res) => {
                 console.log(res)
             })
@@ -97,9 +98,9 @@ const PostRecipe = ({ API_URL }) => {
             <div className='default-container'>
                 <div className="image-upload-container">
                     <div className='uploaded-image-container'>
-                        <img className='uploaded-image' src={image} alt="goofy ahh uncle productions"/>
+                        <img className='uploaded-image' src={image.webkitRelativePath} alt="goofy ahh uncle productions"/>
                     </div>
-                    <input type="file" value={image} onChange={handleImageChange} />
+                    <input type="file" onChange={handleImageChange} />
                     <button onClick={handleSubmit} >Submit</button>
                 </div>
             </div>
