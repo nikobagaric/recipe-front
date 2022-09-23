@@ -6,6 +6,7 @@ import Home from './pages/Home';
 import Recipe from './pages/Recipe';
 import SignUp from './pages/SignUp';
 import PostRecipe from './pages/PostRecipe';
+import Users from './pages/Users'
 
 const API_URL = '' // back-end url
 
@@ -19,6 +20,7 @@ function App() {
         <Route exact path='/' element={<Home/>}/>
         <Route path='/sign-up' element={<SignUp API_URL={API_URL}/>} />
         <Route path='/recipe/post' element={<PostRecipe API_URL={API_URL}/>} />
+        <Route path='/users' element={<Users API_URL={API_URL}/>}/>
 
         <Route path='/recipe/:id' element={<Recipe/>}/>
       </Routes>

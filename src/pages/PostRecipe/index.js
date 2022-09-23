@@ -35,7 +35,6 @@ const PostRecipe = ({ API_URL }) => {
                 [image]: image,
             }
         })
-        console.log(image)
     }
 
     const handleSubmit = () => {
@@ -98,11 +97,11 @@ const PostRecipe = ({ API_URL }) => {
             <div className='default-container'>
                 <div className="image-upload-container">
                     <div className='uploaded-image-container'>
-                        <img className='uploaded-image' src={image.webkitRelativePath} alt="goofy ahh uncle productions"/>
+                        <img className='uploaded-image' src={image && URL.createObjectURL(image)} alt="goofy ahh uncle productions"/>
                     </div>
                     <input type="file" onChange={handleImageChange} />
-                    <button onClick={handleSubmit} >Submit</button>
                 </div>
+                <button className='submit-button' onClick={handleSubmit} >Submit</button>
             </div>
         </div>
     )
