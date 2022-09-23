@@ -1,4 +1,7 @@
-.users-contact {
+.users-container {
     display: flex;
     margin-top: 15vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
