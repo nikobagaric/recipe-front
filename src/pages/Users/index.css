@@ -5,3 +5,28 @@
     align-items: center;
     flex-direction: column;
 }
+.users-header-container {
+    display: flex;
+    position: absolute;
+    top: 0;
+    height: 17.5vh;
+    justify-content: center;
+    background-color: rgb(235,237,239);
+    width: 100vw;
+}
+.users-search-container {
+    display: flex;
+    margin-top: 6.25rem;
+    justify-content: center;
+}
+.users-search-label {
+    font-size: xx-large;
+    margin-right: 2vw;
+}
+.users-search-input {
+    border-radius: 2rem;
+    width: 16vw;
+    height: 3.5vh;
+    margin-top: 0.5rem;
+    padding: 2px 2px;
+}
