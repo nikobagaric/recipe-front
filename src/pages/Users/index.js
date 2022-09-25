@@ -1,9 +1,9 @@
 import UserCard from '../../components/UserCard';
-import tempdata from '../../components/UserCard/tempdata';
+import usedata from '../../components/UserCard/usedata';
 import './index.css'
 
 const Users = ({ API_URL }) => {
-  const userCards = tempdata.map(user => {
+  const userCards = usedata.map(user => {
     return (
       <UserCard props={user} />
     )

@@ -10,7 +10,7 @@ export default [
     image: "images/paella.jpg",
     link: "https://google.com",
     tags: ["Spanish", "Seafood"],
-    user: "John Doe",
+    user_id: 1,
   }, // we can filter in front end and in back end :D
   {
     id: 2,
@@ -23,6 +23,6 @@ export default [
     image: "images/paella.jpg",
     link: "https://google.com",
     tags: ["tag A", "tag B"],
-    user: "John Doe",
+    user_id: 2,
   },
 ];
