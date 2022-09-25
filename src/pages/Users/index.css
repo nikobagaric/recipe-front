@@ -16,7 +16,8 @@
 }
 .users-search-container {
     display: flex;
-    margin-top: 6.25rem;
+    position: absolute;
+    bottom: 16.5%;
     justify-content: center;
 }
 .users-search-label {
@@ -29,4 +30,8 @@
     height: 3.5vh;
     margin-top: 0.5rem;
     padding: 2px 2px;
+}
+.users-cards-container {
+    margin-top: 4vh;
+    display: flex;
 }

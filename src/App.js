@@ -7,6 +7,7 @@ import Recipe from './pages/Recipe';
 import SignUp from './pages/SignUp';
 import PostRecipe from './pages/PostRecipe';
 import Users from './pages/Users'
+import UserProfile from './pages/UserProfile';
 
 const API_URL = '' // back-end url
 
@@ -22,6 +23,7 @@ function App() {
         <Route path='/recipe/post' element={<PostRecipe API_URL={API_URL}/>} />
         <Route path='/users' element={<Users API_URL={API_URL}/>}/>
 
+        <Route path='/user/:id' element={<UserProfile/>} />
         <Route path='/recipe/:id' element={<Recipe/>}/>
       </Routes>
     </Router>

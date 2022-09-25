@@ -37,6 +37,7 @@ const PostRecipe = ({ API_URL }) => {
         })
     }
 
+    //connect to back-end
     const handleSubmit = () => {
         const submitData = new FormData()
         submitData.append(formData)
