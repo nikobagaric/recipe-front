@@ -1,0 +1,23 @@
+
+.user-profile-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15vh;
+}
+.user-profile {
+    display: flex;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    margin-bottom: 5vh;
+}
+.user-profile-name {
+    font-size: x-large;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+}
+.user-recipes-title {
+    font-size: xx-large;
+    font-weight: 700;
+}

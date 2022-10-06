@@ -2,7 +2,7 @@ import './index.css'
 
 const UserCard = ({ props }) => {
   return (
-    <a className="user-card-container" href={`/user/${props.id-1}`}>
+    <a className="user-card-container" href={`/user/${props.id}`}>
       <div className="user-card-image">
         <img alt='user profile' src={props.image} />
       </div>
